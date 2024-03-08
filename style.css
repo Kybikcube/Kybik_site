@@ -1,0 +1,74 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/img/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+#user-card {
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    background: #fff;
+    text-align: center;
+} 
+#banner {
+    width: 100%;
+    height: 100px;
+    background-image: url('assets/img/banner.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+} 
+#avatar {
+    margin-top: -50px;
+} 
+#avatar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+} 
+#username h2 {
+    margin: 0;
+    padding: 10px;
+    font-size: 20px;
+}
+#controls {
+    padding: 20px;
+}
+#playButton {
+    font-size: 16px;
+    color: #fff;
+    background-color: #df48ec;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+} 
+#playButton:hover {
+    background-color: #990099; /* Меняем цвет при наведении — так более стильно */
+} 
+#playButton:focus {
+    outline: none; /* Убираем контур при фокусе - для красоты */
+}
+#profile-views {
+    color: #777;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+@media (min-width: 601px) and (max-width: 900px) {}
+
+@media (min-width: 901px) {}
+
+@media (min-width: 1201px) {}

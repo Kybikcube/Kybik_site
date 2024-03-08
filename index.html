@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Kybik Dev</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="user-card">
+        <div id="banner">
+            <img src="assets/img/banner.gif" alt="Banner">
+        </div>
+        <div id="avatar">
+            <img src="assets/img/avatar.jpg" alt="Avatar">
+        </div>
+        <div id="username">
+            <h2>The Kybik Dev</h2>
+        </div>
+        <div id="controls">
+            <button id="playButton">Включить музыку</button>
+        </div>
+        <div id="profile-views">
+            <span id="views-count">0</span> просмотров этой страницы
+        </div>
+    </div>
+
+    <script>
+        var audio = new Audio('assets/music/kybik.mp3');
+        var isPlaying = false;
+
+        function toggleMusic() {
+            if (isPlaying) {
+                audio.pause();
+                isPlaying = false;
+                document.getElementById('playButton').innerText = 'Включить музыку';
+            } else {
+                audio.play();
+                isPlaying = true;
+                document.getElementById('playButton').innerText = 'Выключить музыку';
+            }
+        }
+
+        document.getElementById('playButton').addEventListener('click', toggleMusic);
+
+        // Показать кнопку после задержки
+        setTimeout(function() {
+            document.getElementById('playButton').classList.remove('hidden');
+        }, 3000);
+    </script>
+    <script src="assets/js/show.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            var viewsCount = localStorage.getItem('viewsCount') || 0; // Получаем значение из localStorage или нащинаем с 0
+            viewsCount++; // Увеличиваем на 1 при каждой загрузке страницы
+            document.getElementById('views-count').textContent = viewsCount; // Обновляем текстовый контент
+            localStorage.setItem('viewsCount', viewsCount); // Сохраняем новое значение обратно в localStorage
+        });
+    </script>
+
+</body>
+</html>
